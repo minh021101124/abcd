@@ -1,0 +1,337 @@
+/* .sidebar {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+}
+.sidebar a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.sidebar a:hover {
+    color: #000;
+} */
+
+/* Thêm CSS cho ảnh mô tả sản phẩm */
+.product-details {
+    padding-bottom: 0px;
+   
+    display: flex;
+    align-items: flex-start; /* Căn các phần tử về phía trên */
+}
+.product-main-image {
+    width: 320px; /* Kích thước của ảnh đại diện */
+    height: 350px; /* Kích thước của ảnh đại diện */
+    object-fit: cover;
+    border: 1px solid rgb(226, 226, 226);
+    margin-bottom: 20px; /* Khoảng cách giữa ảnh và các ảnh mô tả */
+}
+.product-thumbnails {
+    display: flex; /* Sử dụng flexbox */
+    flex-wrap: nowrap; /* Không cho các ảnh mô tả xuống dòng */
+    overflow-x: auto; /* Cho phép cuộn nếu có quá nhiều ảnh */
+    margin-top:20px;
+    margin-bottom: 20px; /* Khoảng cách giữa ảnh và các thông tin sản phẩm */
+    margin-left:20px;
+}
+.product-thumbnail {
+    width: 80px; /* Kích thước của ảnh nhỏ */
+    height: 80px; /* Kích thước của ảnh nhỏ */
+    overflow: hidden;
+    
+    margin-right: 10px;
+}
+.product-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-info {
+    
+    flex: 1; /* Các thông tin sản phẩm sẽ chiếm phần còn lại của không gian */
+    margin-left:50px;
+}
+
+/* CSS cho bảng mô tả sản phẩm */
+/* CSS cho phần tiêu đề và mô tả sản phẩm */
+.description-container {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    line-height: 1.6;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Thêm thuộc tính position để dùng cho đường thẳng */
+}
+
+/* CSS cho tiêu đề */
+.description-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: -25px; /* Dịch chuyển tiêu đề lên trên để chồng lên đường thẳng */
+}
+
+/* CSS cho đường thẳng */
+.description-divider {
+    width: 100%; /* Chiều rộng của đường thẳng */
+    height: 1px; /* Độ dày của đường thẳng */
+    background-color: #ccc; /* Màu sắc của đường thẳng */
+    position: absolute; /* Đặt đường thẳng tuyệt đối trong phần tử cha */
+    bottom: 0; /* Đặt đường thẳng ở dưới cùng của phần tử cha */
+}
+
+.description-line {
+font-size: 20px;
+margin-left:20px;
+margin-right:20px;
+font-weight: bold;
+margin-top:20px;
+margin-bottom: 10px;
+color: #333;
+border-bottom: 2px solid #ccc;
+padding-bottom: 5px;
+}
+
+.description-content{
+    margin-left:30px;
+    margin-right:30px;
+}
+
+.related-product-thumbnails {
+    display: flex; /* Sử dụng flexbox */
+    flex-wrap: nowrap; /* Không cho các ảnh mô tả xuống dòng */
+    overflow-x: auto; /* Cho phép cuộn nếu có quá nhiều ảnh */
+    margin-bottom: 20px; /* Khoảng cách giữa ảnh và các thông tin sản phẩm */
+    margin-left: 20px;
+    
+    padding-bottom: 20px; /* Thêm padding dưới để tạo khoảng cách */
+}
+
+.related-product-thumbnail {
+    width: 80px; /* Kích thước của ảnh nhỏ */
+    height: 80px; /* Kích thước của ảnh nhỏ */
+    overflow: hidden;
+    
+    margin-right: 10px;
+}
+
+.related-image {
+    width: calc(25% - 15px); /* Tính toán kích thước của ảnh đại diện để có 4 ảnh trong một hàng */
+    max-width: 200px; /* Kích thước tối đa của ảnh đại diện */
+    height: auto; /* Chiều cao tự động dựa trên tỷ lệ khung hình */
+    object-fit: cover;
+   
+    margin-right: 15px; /* Khoảng cách giữa các ảnh */
+}
+.related-container{
+    margin-top: 20px;
+margin-left: 20px;
+margin-right: 20px;
+padding: 20px;
+background-color: #f9f9f9;
+
+font-size: 14px;
+line-height: 1.6;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+display: flex;
+}
+
+.product-price-detail{
+    font-size:1.6em ;
+    font-weight: bold;
+    color: #333;
+}
+.product-price-detail-number{ 
+    color: #0d20d2;
+    font-weight: 600;
+    font-size:2.2em ;
+    margin-block-end: 10px;
+    margin-right: 10px;
+}
+.product-discount-detail {
+    color: #070707;
+    text-decoration:none;
+    font-size:1.4em ;
+    margin-block-end: 10px;
+    
+    line-height: 75px;
+}
+.product-discount-detail-number {
+    color: #bfbfbf;
+    text-decoration: line-through;
+    font-size:1.8em ;
+    line-height: 55px;
+    margin-block-end: 10px;
+    
+}
+
+.product-name {
+    word-wrap: break-word;
+}
+    
+.quantity {
+    position: relative;
+}
+
+.quantity-input1 {
+    margin-top: 50px;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px; /* Thêm dòng này để tăng kích thước chữ */
+}
+.quantity-btn {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background-color: #f9f9f9;
+    font-size: 16px;
+
+    color: #333;
+}
+
+.quantity-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.left {
+    background: rgb(255, 255, 255);
+    width: 40%;
+    height: 500px;
+    margin-right: 9%;
+}
+
+.right {
+    background: #ffffff;
+    width: 50%;
+    height: 400px;
+}
+
+.deprod {
+    max-width: 97%;
+    height: 550px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+}
+
+.imaged img {
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 400px;
+    height: 350px;
+}
+
+/* .all {
+    background: #e0e0e0;
+    height: 500px;
+} */
+
+.det {
+    background: #ffffff;
+    width: 100%;
+    height: auto;
+    
+}
+
+.right td {
+    vertical-align: top;
+    padding-top: 25px;
+}
+
+.imgdet {
+    display: flex;
+    overflow-x: auto;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.product-thumbnail {
+    flex: 0 0 auto;
+    margin-right: 23px;
+    border-radius: 20px;
+    border: 1px solid rgb(232, 232, 232);
+    cursor: pointer;
+    /* Add cursor pointer to indicate clickable element */
+}
+
+.product-thumbnail:last-child {
+    margin-right: 0;
+}
+
+.product-thumbnail img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(108, 107, 107);
+    background-color: rgba(80, 79, 79, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #f1f1f1;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dett {
+    background: #ffffff;
+    border-radius: 20px;
+    max-width: 98%;
+}
+.de1{
+    width: 80%;
+    margin-left: 10%;
+    
+}
+.title1{
+    background: rgb(214, 217, 222);
+    color: #000000;
+    padding-top: 20px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px 10px 0 0; 
+}
+ 
+

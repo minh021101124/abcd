@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+  }
+  
+  .header h1 {
+    font-size: 48px;
+  }
+  
+  /*----- Phần menu -----*/
+  .menu {
+      width:100%;
+      margin:0px auto;
+      background:#bf5c71;
+      height: 50px;
+      
+  }
+  .menu li {
+      margin:0px;
+      list-style:none;
+      
+  }
+  .menu a {
+      transition:all linear 0.15s;
+      color:#919191;
+      text-decoration:none;
+  }
+  .menu li:hover > a, .menu .current-item > a {
+      text-decoration:none;
+      color:#be5b70;
+  } 
+  .menu .arrow {
+      font-size:11px;
+      line-height:0%;
+  } 
+  /*----- css cho phần menu cha -----*/
+  .menu > ul > li {
+      float:left;
+      display:inline-block;
+      position:relative;
+      font-size:19px;
+  }
+  .menu > ul > li > a {
+      padding:10px 40px;
+      display:inline-block;
+      color:white;
+  }
+  .menu > ul > li:hover > a, .menu > ul > .current-item > a {
+      background:#2e2728;
+  }
+  /*----css cho menu con----*/
+  .menu li:hover .sub-menu {
+      z-index:1;
+      opacity:1;
+  }
+  .sub-menu {
+      width:160%;
+      padding:5px 0px;
+      position:absolute;
+      top:100%;
+      left:0px;
+      z-index:-1;
+      opacity:0;
+      transition:opacity linear 0.15s;
+      box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+      background:#2e2728;
+  }
+  .sub-menu li {
+      display:block;
+      font-size:16px;
+  }
+  .sub-menu li a {
+      padding:10px 30px;
+      display:block;
+  }
+  .sub-menu li a:hover, .sub-menu .current-item a {
+      background:#3e3436;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+
+
+   /* Styling for product container */
+   .product-container {
+    width:25%;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+.product-name {
+    font-weight: bold;
+    margin: 10px 0;
+}
+.product-price {
+    color: #e74c3c;
+    font-size: 18px;
+}
+.add-to-cart-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.view-details-button {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}

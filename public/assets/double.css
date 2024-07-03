@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300&display=swap');
+
+
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.paymentother {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.paymentother button {
+    height: 55px;
+    background: #F2F2F2;
+    border-radius: 11px;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
+.paymentother button svg {
+    height: 18px;
+}
+
+.paymentother button:last-child svg {
+    height: 22px;
+}
+
+.separator {
+    width: calc(100% - 20px);
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 10px;
+    color: #8B8E98;
+    margin: 0 10px;
+}
+
+.separator p {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    margin: auto;
+}
+
+.separator .line {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: #e8e8e8;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input_container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 15px;
+}
+
+.split input {
+    width: 100%;
+}
+
+.input_label {
+    font-size: 12px;
+    color: #8B8E98;
+    font-weight: 600;
+}
+
+.input_field {
+    width: auto;
+    height: 40px;
+    padding: 0 0 0 16px;
+    border-radius: 9px;
+    outline: none;
+    background-color: #F2F2F2;
+    border: 1px solid #e5e5e500;
+    transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.input_field:focus {
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 0px 2px #242424;
+    background-color: transparent;
+}
+
+.input_field::-webkit-outer-spin-button,
+.input_field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.checkout {
+    position: relative;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    border: none;
+    background: #003b4a;
+    color: ghostwhite;
+    overflow: hidden;
+}
+
+.checkout span {
+    position: relative;
+    transition: color 0.6s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em 0.8em 1.05em;
+}
+
+.checkout::before,
+.checkout::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.checkout::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.5s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.checkout:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+.checkout:active {
+    transform: scale(0.95);
+}
+
+.paymentother button {
+    transition: 0.3s;
+}
+
+.paymentother button:hover {
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* CSS cho menu header */
+header {
+    background-color: #4693da;
+    height: 100px;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 50px;
+}
+
+ul li {
+    margin-right: 20px;
+}
+
+ul li:last-child {
+    margin-right: 0;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #56554d;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 10px;
+    border-bottom: 1px solid #4693da;
+}
+
+.submenu li {
+    margin: 5px 0;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    margin-right: 0;
+    width: 200px;
+}
+
+nav ul li ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #4693da;
+    transition: color 0.3s;
+}
+
+nav ul li ul li:hover a {
+    background-color: #f2f3f4;
+}
+
+nav ul li:has(ul)::after {
+    content: '⍗';
+    color: #ffffff;
+    margin-left: 3px;
+}
+
+.nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    margin-right: 0;
+    width: 200px;
+}
+
+nav ul li ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #4693da;
+    transition: color 0.3s;
+}
+
+nav ul li ul li:hover a {
+    background-color: #f2f3f4;
+}
+
+nav ul li:has(ul)::after {
+    content: '⍗';
+    color: #ffffff;
+    margin-left: 3px;
+}
+
+/* CSS cho phần nội dung */
+
+
+
+    .container {
+        display: grid;
+       
+        height: 80vh; /* Full viewport height */
+    }
+    
+
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.product-item {
+    flex-basis: calc(15% - 20px);
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.product-image {
+    max-width: 98%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.product-details {
+    padding: 5px;
+    max-height: 90px;
+    padding-top: 10px;
+}
+
+.product-title {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.product-price,
+.product-discount {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    font-size: 1em;
+}
+
+.product-discount {
+    color: #a09c9b;
+    text-decoration: line-through;
+    font-size: 0.8em;
+    margin-block-end: 3px;
+    margin-right: 3px;
+}
+
+.product-category a {
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 13px;
+    color: #86a8ff;
+    font-weight: bold;
+}
+
+.product-category a:hover {
+    color: #d9534f;
+}
+
+.img-product {
+    width: 98%;
+    height: 40%;
+    margin-bottom: 20px;
+}
+
+/* CSS cho thanh tìm kiếm */
+nav .menu li:first-child {
+    margin-right: auto;
+}
+
+nav .menu li form {
+    display: flex;
+    align-items: center;
+}
+
+nav .menu li form input[type="text"] {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    color: #333;
+    box-shadow: none;
+}
+
+nav .menu li form input[type="text"]:focus {
+    background-color: #e0e0e0;
+    outline: none;
+}
+
+nav .menu li form button {
+    padding: 8px 15px;
+    background-color: #d31919;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 50px;
+}
+
+nav .menu li form button:hover {
+    background-color: #c96b00;
+    outline: none;
+}
